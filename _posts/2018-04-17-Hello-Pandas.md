@@ -7,9 +7,9 @@ title: Hello Pandas!
 
 In my endeavor to help a fictitious NGO called WomenTechWomenYes (WTWY), aiming to raise money for their cause through a Spring GALA, organized annually in the month of May - I decided to figure out which locations in NYC would be most suited for their street teams to hand out pamphlets to potential attendees such that they can maximize attendance and donation.
 
-![alt_text]({{ site.url }}/_posts/images/IMG_4444.jpg)
+![alt_text]({{ site.url }}/images/IMG_4444.jpg)
 
-## Let's get some data
+### Let's get some data
 
 Best place to get data about humans congregating in specific areas of NYC?
 The NYC subway station company.
@@ -21,7 +21,7 @@ What's a Turnstile you ask? A Turnstile is the metal barrier you push through to
 
 You may find this data here: http://web.mta.info/developers/turnstile.html
 
-## What do your computer eyes see Python?
+### What do your computer eyes see Python?
 
 I find that the number of data points per day remains fairly consistent.
 
