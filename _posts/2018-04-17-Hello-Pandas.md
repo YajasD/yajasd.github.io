@@ -7,7 +7,7 @@ title: Hello Pandas!
 
 In my endeavor to help a fictitious NGO called WomenTechWomenYes (WTWY), aiming to raise money for their cause through a Spring GALA, organized annually in the month of May - I decided to figure out which locations in NYC would be most suited for their street teams to hand out pamphlets to potential attendees such that they can maximize attendance and donation.
 
-![alt_text](images/IMG_4444.jpg)
+![alt_text]({{ site.url }}/_posts/images/IMG_4444.jpg)
 
 ## Let's get some data
 
