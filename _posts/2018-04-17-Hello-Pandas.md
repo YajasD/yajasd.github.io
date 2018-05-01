@@ -19,7 +19,7 @@ What's a Turnstile you ask? A Turnstile is the metal barrier you push through to
 
 ![]("turnstile image")
 
-You may find this data here: http://web.mta.info/developers/turnstile.html
+You may find this data <a href='http://web.mta.info/developers/turnstile.html'>here</a>
 
 ### What do your computer eyes see Python?
 
@@ -34,7 +34,7 @@ After aggregating certain columns and some addition and subtraction, I'm able to
 Hmmm....
 
 Let's look at a histogram to get an idea of what the frequency of number of entries looks like.
-
+</code>
 <Histogram>
 
 Looks like the number of entries per turnstile is around
