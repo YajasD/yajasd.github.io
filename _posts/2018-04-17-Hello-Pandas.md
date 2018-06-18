@@ -17,15 +17,27 @@ The Metropolitan Transportation Authority is nice enough to post weekly Turnstil
 
 What's a Turnstile you ask? A Turnstile is the metal barrier you push through to enter/exit a station. Each station has multiple Turnstiles, often grouped together in groups of 2 or more.
 
-![]("turnstile image")
+![alt_text]({{ site.url }}/images/automatic-tripod-turnstile-gate.jpg)
 
-You may find this data <a href='http://web.mta.info/developers/turnstile.html'>here</a>
+This data may be found <a href='http://web.mta.info/developers/turnstile.html'>here.</a>
 
-### What do your computer eyes see Python?
+### What do your computer eyes see, Python?
+
+Average attendees
 
 I find that the number of data points per day remains fairly consistent.
 
-After aggregating certain columns and some addition and subtraction, I'm able to calculate the total number of entries per Turnstile per day. This is an interesting metric.
+Then, I'm able to calculate the total number of entries per Turnstile per day. 
+
+As can be seen from the graph below, majority of the data points are between 0 and ~75 million.
+
+Zooming in, I see no real variation in my histogram until
+
+![alt_text]({{ site.url }}/images/graph1.png)
+
+Let's zoom in....
+
+
 
 <paste cells leading up to number of entries column>
 
