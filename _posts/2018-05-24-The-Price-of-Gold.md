@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linear Regression & The price of Gold
+title: Linear Regression & The Price of Gold
 ---
 
 
@@ -34,11 +34,11 @@ After establishing these as my features, I decided to get my data.
 
 Let's look at the price of gold between August 2016 and April 2018.
 
-![alt_text]({{ site.url }}/images/gold_price.png)
+![alt_text]({{ site.url }}/images/gold_price.jpg)
 
 Now, let's look at all our features over the same period.
 
-![alt_text]({{ site.url }}/images/AllFeatures.png)
+![alt_text]({{ site.url }}/images/AllFeatures.jpg)
 
 
 Do you see some trends? Good. Let's see if we can find a nice little equation that captures this relationship.
@@ -47,7 +47,7 @@ Before we dive into actually finding our equation, Let's find out-
 
 ### How are these features related to the price of Gold?
 
-![alt_text]({{ site.url }}/images/heatmap.png)
+![alt_text]({{ site.url }}/images/heatmap.jpg)
 
 From this correlation heat-map, we see that of our 4 features, EURUSD seems to be the most correlated to the price of Gold, followed by M1SL, inflation rate (negatively correlated) and lastly the CRB index.
 
@@ -55,7 +55,7 @@ From this correlation heat-map, we see that of our 4 features, EURUSD seems to b
 
 I start simple. Using the good old Ordinary Least Squares method, I get:
 
-![alt_text]({{ site.url }}/images/linreg1ols.png)
+![alt_text]({{ site.url }}/images/linreg1ols.jpg)
 
 With an R^2 score of 0.67, and a Mean Absolute Error (MAE) of $28, while it's not abysmal. It's surely not very good. Also, notice how whenever the price is over $1300, my model does terribly.
 
@@ -65,7 +65,7 @@ What if I try adding Polynomial Features into the mix? Basically, I'm giving my 
 
 My model immediately does better -
 
-![alt_text]({{ site.url }}/images/linreg1poly.png)
+![alt_text]({{ site.url }}/images/linreg1poly.jpg)
 
 Note that here I am using 2nd degree Polynomial Features. My R^2 is up to 0.82 and MAE is down to $15.
 
