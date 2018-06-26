@@ -38,7 +38,7 @@ Let's look at the price of gold between August 2016 and April 2018.
 
 Now, let's look at all our features over the same period.
 
-![alt_text]({{ site.url }}/images/AllFeatures.jpg)
+![alt_text]({{ site.url }}/images/AllFeatures.png)
 
 
 Do you see some trends? Good. Let's see if we can find a nice little equation that captures this relationship.
@@ -65,7 +65,7 @@ What if I try adding Polynomial Features into the mix? Basically, I'm giving my 
 
 My model immediately does better -
 
-![alt_text]({{ site.url }}/images/linreg1poly.jpg)
+![alt_text]({{ site.url }}/images/linregpoly.jpg)
 
 Note that here I am using 2nd degree Polynomial Features. My R^2 is up to 0.82 and MAE is down to $15.
 
