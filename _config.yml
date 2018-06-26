@@ -2,9 +2,9 @@
 permalink:           pretty
 
 # Setup
-title:               Yajas Dwivedi 
+title:               Yajas Dwivedi
 tagline:             Hello, I am Yajas' blog.
-url:                 http://yajasdoit.com
+url:                 http://yajasd.github.io
 paginate:            2
 baseurl:             ""
 
@@ -17,9 +17,9 @@ sass:
 
 # About/contact
 author:
-  name:              Yajas Dwivedi 
-  url:               yajasdoit.com 
-  email:             yajasdwivedi@gmail.com 
+  name:              Yajas Dwivedi
+  url:               yajasdoit.com
+  email:             yajasdwivedi@gmail.com
 
 # Custom vars
 version:             2.0.0
@@ -32,7 +32,7 @@ gems:
   - jekyll-gist
 
 # Page List
-pages_list:       
+pages_list:
   About: '/about'
   Archive: '/archive'
   Feed: '/index.html'
