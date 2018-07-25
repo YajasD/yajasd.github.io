@@ -20,13 +20,15 @@ Maintenance of these bad boys can get really expensive yet remains extremely imp
 The aim of this model is to potentially:
 
 ->Provide critical information and an estimate of the health of an engine.
+
 ->Lead to cost savings by avoiding unscheduled maintenance.
+
 ->Increase equipment usage.
 
 
 ### Engine Degradation Simulation
 
-I used the <https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan> Turbofan Engine Degradation Simulation Dataset.
+I used the <a href='https://ti.arc.nasa.gov/tech/dash/groups/pcoe/prognostic-data-repository/#turbofan'>Turbofan Engine Degradation Simulation Dataset</a>.
 
 From the website:
 
@@ -38,30 +40,50 @@ The engine is operating normally at the start of each time series, and starts to
 
 
 ### EDA
-
+-----------------
 Data Set: FD001
+
 Train trjectories: 100
+
 Test trajectories: 100
+
 Conditions: ONE (Sea Level)
+
 Fault Modes: ONE (HPC Degradation)
+-----------------
 
 Data Set: FD002
+
 Train trjectories: 260
+
 Test trajectories: 259
+
 Conditions: SIX
+
 Fault Modes: ONE (HPC Degradation)
+-----------------
 
 Data Set: FD003
+
 Train trjectories: 100
+
 Test trajectories: 100
+
 Conditions: ONE (Sea Level)
+
 Fault Modes: TWO (HPC Degradation, Fan Degradation)
+-----------------
 
 Data Set: FD004
+
 Train trjectories: 248
+
 Test trajectories: 249
+
 Conditions: SIX
+
 Fault Modes: TWO (HPC Degradation, Fan Degradation)
+-----------------
 
 We have 4 datasets, each dataset further has a training and a testing subset.
 
@@ -86,10 +108,15 @@ While modeling, we will need to take this into account.
 ### Modeling
 
 1. KNN
+
 2. Logistic regression
+
 3. Support Vector Machines
+
 4. Decision Trees
+
 5. Bagging Classifier
+
 6. Random Forest
 
 Let's walk through implementations of each of these to arrive at our best model.
@@ -142,23 +169,28 @@ Let's explore further through a confusion matrix.
 
 According to this, in Test Set 1:
 
-Of a total of (10096+1760) healthy engines, our model identified 10096 engines correctly as 'not failing' (True Positives). It identified 1760 engines as 'failing' even though they were healthy (False negatives).
+Of a total of 11856 (10096+1760) healthy engines, our model identified 10096 engines correctly as 'not failing' (True Positives). It identified 1760 engines as 'failing' even though they were healthy (False negatives).
 
-Of a total of (135+1105) failing engines, our model correctly identified 1105 engines correctly as 'failing' (True Negatives). It misidentified 135 bad engines as being healthy (False Positives).
+Of a total of 1240 (135+1105) failing engines, our model correctly identified 1105 engines correctly as 'failing' (True Negatives). It misidentified 135 bad engines as being healthy (False Positives).
 
-The ratio of correctly identified healthy engines (True Positives) to the total number of engines identified as healthy (True Positives + False Positives) is called 'Precision'. In Test Set 1, the precision is (10096/10096+135).
+The ratio of correctly identified healthy engines (True Positives) to the total number of engines identified as healthy (True Positives + False Positives) is called 'Precision'. In Test Set 1, the precision is 98.6% (10096/10096+135).
 
-The ratio of correctly identified healthy engines (True Positives) to the actual total number of healthy engines (True Positives + False Negatives) is called 'Recall'. In Test Set 1, the recall is (10096/10096+1760).
+The ratio of correctly identified healthy engines (True Positives) to the actual total number of healthy engines (True Positives + False Negatives) is called 'Recall'. In Test Set 1, the recall is 85.15% (10096/10096+1760).
 
-The ratio of correctly identified failing engines (True Negatives) to the actual total number of failing engines (True Negatives + False Positives) is called 'Specificity' or 'True Negative Rate'. In Test Set 1, the specificity is 1105/(1105+135).
+The ratio of correctly identified failing engines (True Negatives) to the actual total number of failing engines (True Negatives + False Positives) is called 'Specificity' or 'True Negative Rate'. In Test Set 1, the specificity is 89.11% (1105/1105+135).
 
 In this exercise of predicting engine failure, we are interested in maximizing our correct predictions of engines that are failing i.e. the metric that we will try to optimize for is going to be, specificity.
 
 KNN ONE condition model - Specificity (%)
+
 Test Set 1: 89.11
+
 Test Set 2: 14.46
+
 Test Set 3: 92.36
+
 Test Set 4: 13.66
+
 Mean: 52.39
 
 Looking at the confusion matrix for SIX condition models.
@@ -166,10 +198,15 @@ Looking at the confusion matrix for SIX condition models.
 ![alt_text]({{ site.url }}/images/confusion_matrix_6.jpg)
 
 KNN SIX condition model - Specificity (%)
+
 Test Set 1: 89.59
+
 Test Set 2: 93.76
+
 Test Set 3: 90.35
+
 Test Set 4: 91.47
+
 Mean: 91.29
 
 So while at first glance, it might look like the ONE condition model was outperforming the SIX condition model, looking at it more deeply and taking into account the metric that we are interested in - we see that the SIX condition model does a lot better.
@@ -179,10 +216,15 @@ So while at first glance, it might look like the ONE condition model was outperf
 ![alt_text]({{ site.url }}/images/logistic_regression_6.jpg)
 
 Specificity (%)
+
 Test Set 1: 93.70
+
 Test Set 2: 94.52
+
 Test Set 3: 88.42
+
 Test Set 4: 87.79
+
 Mean: 91.10
 
 #### 3. Support Vector Machines
@@ -190,10 +232,15 @@ Mean: 91.10
 ![alt_text]({{ site.url }}/images/svm_6.jpg)
 
 Specificity (%)
+
 Test Set 1: 93.54
+
 Test Set 2: 94.38
+
 Test Set 3: 88.24
+
 Test Set 4: 87.53
+
 Mean: 90.92
 
 #### 4. Decision Trees
@@ -201,10 +248,15 @@ Mean: 90.92
 ![alt_text]({{ site.url }}/images/dt_6.jpg)
 
 Specificity (%)
+
 Test Set 1: 89.27
+
 Test Set 2: 92.97
+
 Test Set 3: 91.84
+
 Test Set 4: 90.95
+
 Mean: 91.25
 
 #### 5. Bagging Classifier
@@ -212,10 +264,15 @@ Mean: 91.25
 ![alt_text]({{ site.url }}/images/bc_6.jpg)
 
 Specificity (%)
+
 Test Set 1: 90.80
+
 Test Set 2: 93.79
+
 Test Set 3: 93.15
+
 Test Set 4: 93.76
+
 Mean: 92.87
 
 #### 6. Random Forest
@@ -223,10 +280,15 @@ Mean: 92.87
 ![alt_text]({{ site.url }}/images/rf_6.jpg)
 
 Specificity (%)
+
 Test Set 1: 90.72
+
 Test Set 2: 94.35
+
 Test Set 3: 93.50
+
 Test Set 4: 93.12
+
 Mean: 92.92
 
 ### Conclusion/Future Work
