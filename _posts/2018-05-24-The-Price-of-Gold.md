@@ -3,8 +3,6 @@ layout: post
 title: Linear Regression & The Price of Gold
 ---
 
-
-
 ### What contributes to the price of a shiny metal?
 
 Decided to use my new found Linear Regression and Web Scraping powers to find a relationship between the price of an ounce of Gold and the following features:
@@ -25,7 +23,7 @@ After establishing these as my features, I decided to get my data.
 
 --> Scraped the price of Gold using Selenium from this <a href='http://onlygold.com/Info/Search-Gold-Prices.asp'>website.</a>
 
--->Inflation Data was scraped using Selenium too.
+-->Inflation Data was scraped using Selenium from this <a href='https://inflationdata.com/Inflation/Inflation_Rate/CurrentInflation.asp?reloaded=true'>one.</a>
 
 -->The other websites were nice enough to provide a direct download link!
 
@@ -73,6 +71,6 @@ Pretty neat huh? Clearly my chosen features have a relationship with the price o
 
 ### What's next?
 
-Clearly, the next step is to add a time series component to this analysis to 'predict' the future price given historical price. Start by trying some simple Auto-Regressive/Moving Average models, and then combining the 2 (ARIMA) model. Maybe see how the recently released Facebook Prophet library fares. Once you know Linear Regression, the possibilities are endless!
+The next step is to add a time series component to this analysis to 'predict' the future price given historical price. Start by trying some simple Auto-Regressive/Moving Average models. Maybe see how the recently released Facebook Prophet library fares. Once you know Linear Regression, the possibilities are endless!
 
 **I will be uploading my notebook with all the code to achieve all of the above to my Github repo shortly! Stay tuned! **
