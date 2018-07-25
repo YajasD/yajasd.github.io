@@ -231,6 +231,6 @@ Mean: 92.92
 
 ### Conclusion/Future Work
 
-Based on the results above, we see that due to the nature of the problem - almost all our classifiers perform reasonably well. Our worst performing classifier, the Support Vector Machine model comes out with a mean specificity of 90.92% while our best performing classifier, the random forest model has a mean accuracy of 92.92%. Not bad, at all!
+Based on the results above, we see that due to the nature of the problem - almost all our classifiers perform reasonably well. Our worst performing classifier, the Support Vector Machine model comes out with a mean specificity of 90.92% while our best performing classifier, the random forest model has a mean specificity of 92.92%. Not bad, at all!
 
 Seeing as how the data-set was setup to be used in a regression analysis, I'd like to create that model and compare it's results with my classification models discussed above.
