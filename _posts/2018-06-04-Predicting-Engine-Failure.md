@@ -101,7 +101,7 @@ Looking at Fan Speed, we see a similar pattern.
 
 So what's the difference between Training Sets 1 & 3 and 2 & 4?
 
-The operating conditions. Per the documentation provided with the data, Training sets 1 and 3 - all the engines are operating under just one condition while in training sets 2 and 4, the engines are operating under SIX different conditions.
+The operating conditions (in BOLD above). Per the documentation provided with the data, Training sets 1 and 3 - all the engines are operating under just one condition while in training sets 2 and 4, the engines are operating under SIX different conditions.
 
 While modeling, we will need to take this into account.
 
@@ -147,7 +147,7 @@ This is because, as can be seen in the histograms we made above, there is a very
 
 Let's explore the relationship between sensor readings of a healthy engine and one towards the end of it's life.
 
-![alt_text]({{ site.url }}/images/delineation.jpg)
+![alt_text]({{ site.url }}/images/delineation0.jpg)
 
 The scatter plot above compares Outlet Temperature and Outlet Pressure during the first 20 cycles and last 20, 40, and 60 cycles for all engines in Training Set 1.
 
