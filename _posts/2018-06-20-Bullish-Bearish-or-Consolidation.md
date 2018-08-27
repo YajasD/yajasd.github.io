@@ -212,4 +212,12 @@ Finally the Random Forest Classifier, a tree based algorithm that in the project
 
 ### Conclusion
 
-Well, so there you have it - my attempt at quantifying subjective text data and training algorithms to find information within them. However, as can be seen above - Logistic Regression which is our best performing classifier has an accuracy of only 44%. Hence, it is not something I would make trading decisions based on. With that being said, I can see
+Well, so there you have it - my attempt at quantifying subjective text data and training algorithms to find information within them. However, as can be seen above - Logistic Regression which is our best performing classifier has an accuracy of only 44%. Hence, it is not something I would make trading decisions based on.
+
+Some things that can be used to improve performance:
+
+1. Download and train with more data and over longer periods.
+
+2. Train using a beefier, more powerful machine, like an AWS instance with additional RAM and processing power to use more features following Singular Value Decomposition, to capture more of the explained variance ratio.
+
+3. Train using Neural Networks, use Word2Vec to find more sophisticated semantic relationships.
