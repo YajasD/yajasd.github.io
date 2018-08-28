@@ -43,7 +43,7 @@ From the split video:
 
 4. Mixture of Gaussian (MoG) is applied to all frames.
 
-![alt_text]({{ site.url }}/images/animated.gif)
+The GIF exceeds the size Github allows to upload so I've uploaded it here on <a href='https://imgur.com/a/mn5LcDr'>imgur!</a>
 
 5. Results of MoG are saved.
 
