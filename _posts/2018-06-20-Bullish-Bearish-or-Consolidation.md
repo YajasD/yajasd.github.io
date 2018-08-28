@@ -19,7 +19,7 @@ The year is 1998 and I am talking about the <a href='https://en.wikipedia.org/wi
 
 The parallels between the Internet/websites in the late 90s and Blockchain/cryptocurrencies today are quite analogous.
 
-"An unprecedented amount of personal investing occurred during the boom and stories of people quitting their jobs to engage in full-time day trading were common.[12]"
+<a href='http://content.time.com/time/magazine/article/0,9171,991726,00.html'>"An unprecedented amount of personal investing occurred during the boom and stories of people quitting their jobs to engage in full-time day trading were common"</a>.
 
 In this spirit of trading - I am going to use my Natural Language Processing (NLP) powers to see if I can train a machine to determine the sentiment of a market by 'reading' comments from a popular cryptocurrency forum - r/EthTrader, a subreddit to discuss price/news/updates about the Ethereum platform.
 
