@@ -30,36 +30,29 @@ The camera records at 30fps with a resolution of 1920*1080.
 From the split video:
 
 1. All frames are extracted.
-
-  ![alt_text]({{ site.url }}/images/sample_frame.jpg)
+![alt_text]({{ site.url }}/images/sample_frame.jpg)
 
 2. The frames are converted to grayscale.
-
-  ![alt_text]({{ site.url }}/images/bwframe.jpg)
+![alt_text]({{ site.url }}/images/bwframe.jpg)
 
 3. The grayscale frames are cropped to 1920*500.
-
-  ![alt_text]({{ site.url }}/images/bwcropframe.jpg)
+![alt_text]({{ site.url }}/images/bwcropframe.jpg)
 
 4. Mixture of Gaussian (MoG) is applied to all frames.
-
-  The GIF exceeds the size Github allows to upload so I've uploaded it here on <a href='https://imgur.com/a/mn5LcDr'>imgur!</a>
+The GIF exceeds the size Github allows to upload so I've uploaded it here on <a href='https://imgur.com/a/mn5LcDr'>imgur!</a>
 
 5. Results of MoG are saved.
 
 6. To each MoG frame, a median filter is applied to reduce noise.
-
-  ![alt_text]({{ site.url }}/images/medianfilter.jpg)
+![alt_text]({{ site.url }}/images/medianfilter.jpg)
 
 7. Erosion and thresholding to further reduce noise.
-
-  ![alt_text]({{ site.url }}/images/otsu_thresholding.jpg)
+![alt_text]({{ site.url }}/images/otsu_thresholding.jpg)
 
 8. <a href='https://en.wikipedia.org/wiki/Connected_component_(graph_theory)'>Connected components</a> are counted from this frame.
 
 9. Median of Connected Components over 300 frames taken to arrive at answer.
-
-  ![alt_text]({{ site.url }}/images/finalresult.jpg)
+![alt_text]({{ site.url }}/images/finalresult.jpg)
 
 Some of the advantages of using an unsupervised approach such as this over a deep learning/network based approach is that this allows much greater flexibility of deployment i.e. the skeleton of this algorithm may be applied to any other project where it's desired to count any moving entities. Another advantage is that this algorithm is a lot 'lighter' than a deep learning model which would take a long time to train.
 
